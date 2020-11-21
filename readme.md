@@ -39,6 +39,7 @@ To install:
     numpy      -> pip install numpy
     matpltlib  -> pip install matplotlib
 </pre>
+
 > If you have an cuda enabled gpu you can install tensorflow gpu
 <pre>
     tensorflow GPU -> pip install tensorflow-gpu
