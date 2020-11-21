@@ -28,6 +28,9 @@ Test: 500
 1. Download or clone the repo.
 2. Go in to the repo folder and then run task.py using
 ` python task.py`
+
+>**NOTE:** The program has two different training approach one with only the training dataset and with training + validation dataset and to use them, just keep one of them commented and the uncomment the other or the model may end up getting trained twice.
+
 >***NOTE:*** Make sure you have tensorflow 2.x, numpy and matplotlib installed before running the code.
 <br>
 <pre>
@@ -43,7 +46,8 @@ To install:
 
 >***References and sources:***
 **dataset**: https://github.com/ardamavi/Sign-Language-Digits-Dataset <br>
-**others**:
+
+>**Others**:<br>
 https://chrisalbon.com/deep_learning/keras/neural_network_early_stopping/ <br>
 https://www.tensorflow.org/api_docs/python/tf/keras
 

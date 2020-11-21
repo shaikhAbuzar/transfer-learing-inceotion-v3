@@ -78,7 +78,7 @@ callbacks = [
     # ModelCheckpoint(filepath='best_model.h5', monitor='val_loss', save_best_only=True),
 ]
 
-# To run the model with validatio
+# To run the model with validation
 # history = model.fit(
 #         training_data,
 #         steps_per_epoch=8,
