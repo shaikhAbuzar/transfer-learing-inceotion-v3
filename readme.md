@@ -45,7 +45,8 @@ To install:
 </pre>
 
 >***References and sources:***
-**dataset**: https://github.com/ardamavi/Sign-Language-Digits-Dataset <br>
+
+>**dataset**: <br>https://github.com/ardamavi/Sign-Language-Digits-Dataset <br>
 
 >**Others**:<br>
 https://chrisalbon.com/deep_learning/keras/neural_network_early_stopping/ <br>
