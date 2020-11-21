@@ -63,36 +63,46 @@ model.compile(
         metrics=['accuracy']
     )
 
+# to run the training model only.
+history = model.fit(
+    training_data,
+    steps_per_epoch=8,
+    epochs=50,
+    verbose=2,
+    callbacks=[EarlyStopping(monitor='loss', patience=4)]
+)
+
 # Uncomment the ModelCheckpoint for saving the best model
 callbacks = [
     EarlyStopping(monitor='val_loss', patience=4),
     # ModelCheckpoint(filepath='best_model.h5', monitor='val_loss', save_best_only=True),
 ]
 
-history = model.fit(
-        training_data,
-        steps_per_epoch=8,
-        epochs=50,
-        validation_data=validation_data,
-        validation_steps=4,
-        callbacks=callbacks,
-        verbose=2,
-    )
+# To run the model with validatio
+# history = model.fit(
+#         training_data,
+#         steps_per_epoch=8,
+#         epochs=50,
+#         validation_data=validation_data,
+#         validation_steps=4,
+#         callbacks=callbacks,
+#         verbose=2,
+#     )
 
 # Evaluation from test data
 results = model.evaluate(test_data, batch_size=50, verbose=0)
 print(f'\nEvaluation Results: accuracy: {round(results[1], 4)} and loss: {round(results[0], 4)}')
 
 # visualization of accracy and loss
-acc = history.history['accuracy']
-loss = history.history['loss']
-val_acc = history.history['val_accuracy']
-val_loss = history.history['val_loss']
-epochs = range(len(acc))
+# acc = history.history['accuracy']
+# loss = history.history['loss']
+# val_acc = history.history['val_accuracy']
+# val_loss = history.history['val_loss']
+# epochs = range(len(acc))
 
-plt.plot(epochs, acc, 'r', marker='.', label='accuraacy')
-plt.plot(epochs, val_acc, 'b', marker='.', label='validation accuracy')
+# plt.plot(epochs, acc, 'r', marker='.', label='accuraacy')
+# plt.plot(epochs, val_acc, 'b', marker='.', label='validation accuracy')
 # plt.plot(epochs, loss, 'b', label='loss')
 # plt.plot(epochs, val_loss, 'y', label='validation loss')
-plt.legend()
-plt.show()
+# plt.legend()
+# plt.show()
